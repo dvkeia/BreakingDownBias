@@ -1,5 +1,5 @@
-# USCollegeStats
-# Citation: College Scorecard Data: https://collegescorecard.ed.gov/data/
+# Breaking Down Bias
+# Citation: https://hdr.undp.org/content/2023-gender-social-norms-index-gsni#/indicies/GSNI
 
 
 Pages:
