@@ -1,14 +1,15 @@
 import numpy as np
-from taipy.gui import Markdown
+from taipy.gui import Markdown, State
 import plotly.express as px
-
+import pandas as pd
+import taipy.gui.builder as tgb
 from data.data import overall, over_gender, over_time, over_time_gender, geojson
 
-filter = 'GSNI1'
-# selector_filter= ['GSNI1','GSNI2','NB','Political','Educational','Economic','Physical']
+category = 'GSNI1'
+selector_category = list((overall.columns[3:]).astype(str))
 gnsi_map = None
 
-def set_map(filterval='GSNI1'):
+def set_map(filterval):
     gnsi_map = px.choropleth_mapbox(
         overall,
         geojson=geojson, 
@@ -22,12 +23,12 @@ def set_map(filterval='GSNI1'):
     )  
     return gnsi_map
 
-gnsi_map = set_map()
+gnsi_map = set_map(category)
 
 
-def on_change_filter(state):
-    print(state.filter)
-    state.gnsi_map = set_map(state.filter)
+def on_change_category(state : State):
+    print(state.category)
+    state.gnsi_map = set_map(state.category)
 
 
-map_md = Markdown("pages/map.md")
+map_md = Markdown("pages/map/map.md")
