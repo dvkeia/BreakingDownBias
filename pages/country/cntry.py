@@ -10,6 +10,8 @@ count_2 = 'Canada'
 
 comp_data = None
 
+# layout = {'barmode':'stack', "hovermode":"x"}
+
 def comparison(count_1='United States', count_2='Canada'):
     comp_data = overall
     comp_data = comp_data[(comp_data['Country or territory']==count_1) | (comp_data['Country or territory']==count_2)]
@@ -34,7 +36,16 @@ comp_data = comparison()
 bar_graph = pd.DataFrame(comp_data).drop(['ISO3', 'Period'], axis=1)
 print(bar_graph)
 g = create_df(bar_graph, count_1, count_2)
-print(g)
+# print(g)
+# name = 'compare'+count_1+'AND'+count_2+'.csv'
+# g.to_csv('download.csv', index=False)
+file = 'download.xlsx'
+try:
+    # Convert DataFrame to CSV
+    g.to_excel(file, index=False)
+    print(f"CSV file '{file}' has been successfully written.")
+except Exception as e:
+    print(f"Error occurred while writing the CSV file: {str(e)}")
 
 def on_change_country(state : State):
     print('Selected Country 1: ', state.count_1)
@@ -43,6 +54,8 @@ def on_change_country(state : State):
     state.bar_graph = pd.DataFrame(state.comp_data).drop(['ISO3', 'Period'], axis=1)
     test = create_df(state.bar_graph, state.count_1, state.count_2)
     state.g = test
-    print(state.g)
+    # name = 'compare'+state.count_1+'AND'+state.count_2+'.csv'
+    state.g.to_excel(file, index=False)
+    # print(state.g)
 
 cntry_md = Markdown("pages/country/cntry.md")
