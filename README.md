@@ -8,7 +8,7 @@ Taipy Dashbaord Reference: https://github.com/Avaiga/demo-covid-dashboard
 
 ## DEMO Breaking Down Bias!
 Link: https://breakingdownbias.taipy.cloud/
-Using Taipy Cloud. Much Faster!!!
+Using Taipy Cloud. Much Faster!!! Runs for 2 hours then we have to restart it.
 
 Link: https://delightful-ocean-a03f55f0c7594b37b4a442bfd1fce055.azurewebsites.net/
 Deploy via Microsoft Azure. A little (very) slow, but it works! So be patient!
