@@ -7,6 +7,9 @@ GSNI Data Set: https://hdr.undp.org/content/2023-gender-social-norms-index-gsni#
 Taipy Dashbaord Reference: https://github.com/Avaiga/demo-covid-dashboard
 
 ## DEMO Breaking Down Bias!
+Link: https://breakingdownbias.taipy.cloud/
+Using Taipy Cloud. Much Faster!!!
+
 Link: https://delightful-ocean-a03f55f0c7594b37b4a442bfd1fce055.azurewebsites.net/
 Deploy via Microsoft Azure. A little (very) slow, but it works! So be patient!
 
